@@ -12,7 +12,7 @@ class bank1 {
 public class task3 extends bank1 {
 
     public static void main(String[] args) {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 4; i++) {
 
             System.out.println("JAVA BANK ATM");
             System.out.print("PLEASE CHOOSE THE OPTIONS BELOW: \n1.WITHDRAW\n2.DEPOSIT\n3.CHECK BALANCE\n4.EXIT\n");
@@ -59,11 +59,11 @@ public class task3 extends bank1 {
 
     public static void deposit(int balance, int dip) {
 
-        newbal = balance + dip;
+        newbal = newbal + dip;
         System.out.println("DIPOSIT SUCCESSFUL\n YOUR BALANCE: " + newbal + "\n");
     }
 
-    public static void checkbal(int balance) {
+    public static void checkbal(int a) {
 
         int newbal = balance;
         System.out.println("BALANCE SECURE PAGE\n" + "YOUR BALANCE: " + newbal + "\n");
