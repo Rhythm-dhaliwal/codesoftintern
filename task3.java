@@ -2,8 +2,15 @@ import java.util.Scanner;
 
 class bank1 {
 
-    static int balance = 10000;
-    static int newbal;
+    private static int balance = 10000;
+    static int newbal=balance; 
+    public static void setBalance(int balance) {
+        bank1.balance = balance;
+    }
+    public static int getBalance() {
+        return balance;
+    }
+    
 
     
 
@@ -12,7 +19,7 @@ class bank1 {
 public class task3 extends bank1 {
 
     public static void main(String[] args) {
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 10; i++) {
 
             System.out.println("JAVA BANK ATM");
             System.out.print("PLEASE CHOOSE THE OPTIONS BELOW: \n1.WITHDRAW\n2.DEPOSIT\n3.CHECK BALANCE\n4.EXIT\n");
@@ -20,12 +27,12 @@ public class task3 extends bank1 {
             Scanner sc = new Scanner(System.in);
             int opt = sc.nextInt();
             if (opt == 1) {
-                withdraw(balance);
+                withdraw(getBalance());
             } else if (opt == 2) {
                 System.out.println("DIPOSIT SECURE PAGE");
                 System.out.print("ENTER THE AMOUNT: ");
                 int dip = sc.nextInt();
-                deposit(balance, dip);
+                deposit(getBalance(), dip);
 
             } else if (opt == 3) {
 
@@ -65,7 +72,7 @@ public class task3 extends bank1 {
 
     public static void checkbal(int a) {
 
-        int newbal = balance;
+        int newbal = a;
         System.out.println("BALANCE SECURE PAGE\n" + "YOUR BALANCE: " + newbal + "\n");
     }
     
